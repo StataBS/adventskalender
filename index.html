@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=951">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/adventskalender.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/@statabs/statabs-filter@2.1.1/dist/filter.js" type="text/javascript"></script>
@@ -24,7 +25,11 @@
                 <div class="modal-body">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove"></span></button>
                   <div class="carousel-inner" id="carousel-inner">                
-                    <!-- charts are dynamically added here -->
+                    <!-- days are dynamically added here -->
+                    <div class="item active">
+                      <h1>Monatliche Schwebestaubbelastung</h1>
+                      <img src="img/d12.jpg"/>
+                    </div>
                   </div>
                   <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -35,7 +40,7 @@
                 </div>
     
                 <ol class="carousel-indicators carousel-indicators-numbers" id="carousel-indicators">
-                  <!-- dots that link to charts in search results are dynamically added here -->
+                  <!-- dots that link to days in search results are dynamically added here -->
                 </ol>
               </div>
             </div>
@@ -51,7 +56,7 @@
             </div>
         </div>
                 
-        <script id="day-template" type="text/html">
+        <script id="day-thumbnail-template" type="text/html">
             <div class="col-xs-3">
                 <a href="#lightbox" data-toggle="modal" data-slide-to="<%= ID %>">
                     <div class = "thumbnail">
@@ -60,6 +65,15 @@
                 </a>
             </div>
         </script>
+        
+        <!-- full modal day template -->
+        <script id="day-template-modal" type="text/html">
+          <div class="item">
+            <h1><%= Titel %></h1>
+            <img src="<%= 'img/' + Bild %>"/>
+          </div>
+        </script> 
+        
         
     </body>
 </html>
