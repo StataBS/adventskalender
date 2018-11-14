@@ -13,5 +13,53 @@
     </head>
     <body>
         
+        <div class="container"> 
+          <div class="modal fade carousel slide" id="lightbox" data-interval="false" data-backdrop='true'>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!--
+                <div class="modal-header">
+                </div>
+                -->
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove"></span></button>
+                  <div class="carousel-inner" id="carousel-inner">                
+                    <!-- charts are dynamically added here -->
+                  </div>
+                  <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+    
+                <ol class="carousel-indicators carousel-indicators-numbers" id="carousel-indicators">
+                  <!-- dots that link to charts in search results are dynamically added here -->
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>        
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div calss="col-xs-12">
+                    <div id="days">
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <script id="day-template" type="text/html">
+            <div class="col-xs-3">
+                <a href="#lightbox" data-toggle="modal" data-slide-to="<%= ID %>">
+                    <div class = "thumbnail">
+                        <img src="<%= 'img/' + Vorschaubild %>"/>
+                    </div>
+                </a>
+            </div>
+        </script>
+        
     </body>
 </html>
