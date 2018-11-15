@@ -1,5 +1,9 @@
-h1{
-    font-size: 12pt;
+.thumbnail {
+    border: 0px;
+}
+
+h1 {
+    font-size: 14px;
     letter-spacing: none;
     font-weight: bold;
     color: #204453;
@@ -10,7 +14,7 @@ h1{
     margin-right: 50px;
 }
 
-h2{
+h2 {
     font-size: 8pt;
     text-transform: uppercase;
     letter-spacing: none;
@@ -26,8 +30,22 @@ h2{
 .text {
     margin-left: 50px;
     margin-right: 50px;
-    font-size: 10pt;
+    font-size: 12px;
 }
+
+a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #246036;
+    outline: none!important;
+}
+
+.link-icon {
+    height: 12px;
+    width: 15px;
+    margin-left: 50px;
+}
+
 
 .modal.carousel {
   position: fixed; /* Needed because the carousel overrides the position property */
@@ -57,11 +75,6 @@ h2{
 .carousel-control.right { right: 7px; }
 
 /*
-.highcharts-wrapper {
-    height: 415px;
-}
-*/
-
 .carousel-indicators {
     top: 15px;
     height: 15px;
@@ -91,12 +104,22 @@ h2{
     color: black;
 }
 
+*/
 
 .carousel-inner {
     margin-top: 30px;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a {
+.carousel-inner>.item>img {
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 10pt;
+}
+
+/*
+.carousel-inner>.item>a {
     margin-left: 50px;
     font-size: 10pt;
 }
+*/
