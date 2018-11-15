@@ -26,6 +26,7 @@ h2{
 .text {
     margin-left: 50px;
     margin-right: 50px;
+    font-size: 10pt;
 }
 
 .modal.carousel {
@@ -93,4 +94,9 @@ h2{
 
 .carousel-inner {
     margin-top: 30px;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a {
+    margin-left: 50px;
+    font-size: 10pt;
 }
